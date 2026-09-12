@@ -1,0 +1,8 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "extraPaths": [
+    "c:\\Users\\akaly\\OneDrive\\Desktop\\hiver",
+    "C:\\Users\\akaly\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages"
+  ]
+}

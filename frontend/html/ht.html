@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazonHelp AI Support Agent</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>AmazonHelp AI</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#" data-page="dashboard" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="#" data-page="query" class="nav-link">
+                        <i class="fas fa-comments"></i>
+                        <span>Live Query</span>
+                    </a></li>
+                    <li><a href="#" data-page="analytics" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a></li>
+                    <li><a href="#" data-page="pipeline" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Pipeline</span>
+                    </a></li>
+                    <li><a href="#" data-page="reports" class="nav-link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Reports</span>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <h3>System Info</h3>
+                <div class="system-info">
+                    <p><strong>AmazonHelp AI Support Agent</strong></p>
+                    <ul>
+                        <li>✅ 8 Intent Classifications</li>
+                        <li>✅ Real-time Escalation Detection</li>
+                        <li>✅ Historical Context Retrieval (RAG)</li>
+                        <li>✅ Claude-powered Responses</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Top Bar -->
+        <div class="topbar">
+            <div class="topbar-left">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">Dashboard</h1>
+            </div>
+            <div class="topbar-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=FF9900&color=fff" alt="User">
+                    <span>Admin</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <!-- Dashboard Page -->
+            <div class="page" id="dashboard-page" style="display: block;">
+                <div class="page-header">
+                    <h1>🤖 AmazonHelp AI Support Agent</h1>
+                    <p>Real-time Customer Support Intelligence</p>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Support Intents</h3>
+                            <p class="metric-value">8</p>
+                            <span class="metric-label">Multi-classifier</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Inference Mode</h3>
+                            <p class="metric-value">Real-time</p>
+                            <span class="metric-label">Sub-second</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Escalation Gate</h3>
+                            <p class="metric-value">2-Tier</p>
+                            <span class="metric-label">Rule + ML</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>RAG Retrieval</h3>
+                            <p class="metric-value">FAISS</p>
+                            <span class="metric-label">Semantic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Overview Section -->
+                <div class="section-grid">
+                    <div class="card">
+                        <h2>📊 System Overview</h2>
+                        <div class="info-list">
+                            <p><strong>Architecture:</strong></p>
+                            <ul>
+                                <li>Intent Classifier: TF-IDF + Logistic Regression</li>
+                                <li>Retriever: Sentence-Transformers + FAISS</li>
+                                <li>Generator: Claude API</li>
+                                <li>Escalation: Rule-based + Confidence Gating</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card success-card">
+                        <h2>✨ Key Features</h2>
+                        <div class="features-list">
+                            <div class="feature"><i class="fas fa-check"></i> Real-time query processing</div>
+                            <div class="feature"><i class="fas fa-check"></i> Historical context retrieval</div>
+                            <div class="feature"><i class="fas fa-check"></i> Automatic escalation detection</div>
+                            <div class="feature"><i class="fas fa-check"></i> Claude-powered responses</div>
+                            <div class="feature"><i class="fas fa-check"></i> LLM-as-judge evaluation</div>
+                            <div class="feature"><i class="fas fa-check"></i> Failure analysis</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intent Categories -->
+                <div class="card">
+                    <h2>🎯 Support Intent Categories</h2>
+                    <div class="intent-grid">
+                        <button class="intent-btn"><i class="fas fa-clock"></i> Order Delay</button>
+                        <button class="intent-btn"><i class="fas fa-undo"></i> Refund Request</button>
+                        <button class="intent-btn"><i class="fas fa-lock"></i> Account Access</button>
+                        <button class="intent-btn"><i class="fas fa-credit-card"></i> Payment Issue</button>
+                        <button class="intent-btn"><i class="fas fa-star"></i> Product Complaint</button>
+                        <button class="intent-btn"><i class="fas fa-truck"></i> Delivery Problem</button>
+                        <button class="intent-btn"><i class="fas fa-box"></i> Return Request</button>
+                        <button class="intent-btn"><i class="fas fa-question"></i> Other</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Query Page -->
+            <div class="page" id="query-page">
+                <div class="page-header">
+                    <h1>💬 Live Customer Query</h1>
+                    <p>Process and analyze customer support requests in real-time</p>
+                </div>
+
+                <!-- Query Input Section -->
+                <div class="card">
+                    <h2>Enter Customer Query</h2>
+                    <div class="form-group">
+                        <textarea id="queryInput" placeholder="e.g., My package was marked as delivered but I never received it. Please help!" rows="5"></textarea>
+                    </div>
+
+                    <div class="controls-row">
+                        <div class="control-group">
+                            <label for="thresholdSlider">Escalation Threshold:</label>
+                            <input type="range" id="thresholdSlider" min="0.3" max="0.8" step="0.05" value="0.55">
+                            <span id="thresholdValue">0.55</span>
+                        </div>
+                        <div class="button-group">
+                            <button class="btn btn-primary" id="processBtn">
+                                <i class="fas fa-search"></i> Process Query
+                            </button>
+                            <button class="btn btn-secondary" id="clearBtn">
+                                <i class="fas fa-trash"></i> Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsContainer" style="display: none;">
+                    <!-- Analysis Results -->
+                    <div class="results-grid">
+                        <div class="card result-card">
+                            <h3>🎯 Classified Intent</h3>
+                            <div class="intent-result">
+                                <p class="result-intent" id="resultIntent">-</p>
+                                <div class="confidence-container">
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" id="confidenceFill"></div>
+                                    </div>
+                                    <span class="confidence-text" id="confidenceText">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card result-card">
+                            <h3>⚠️ Escalation Decision</h3>
+                            <div id="escalationResult" class="escalation-box">
+                                -
+                            </div>
+                            <p id="escalationReason" class="escalation-reason">-</p>
+                        </div>
+                    </div>
+
+                    <!-- Retrieved Examples -->
+                    <div class="card">
+                        <h2>📚 Retrieved Historical Examples</h2>
+                        <div id="examplesContainer" class="examples-list">
+                            <!-- Examples will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Generated Response -->
+                    <div class="card">
+                        <h2>💬 Generated AmazonHelp Response</h2>
+                        <div class="response-box">
+                            <p id="generatedResponse">-</p>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn btn-success"><i class="fas fa-thumbs-up"></i> Approve</button>
+                            <button class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="btn btn-danger"><i class="fas fa-user-tie"></i> Escalate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query History -->
+                <div class="card" id="historyContainer" style="display: none;">
+                    <h2>📜 Query History</h2>
+                    <div id="queryHistory" class="history-list">
+                        <!-- History will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Page -->
+            <div class="page" id="analytics-page">
+                <div class="page-header">
+                    <h1>📊 Analytics & Metrics</h1>
+                    <p>Performance metrics and system insights</p>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-content">
+                            <h3>Accuracy</h3>
+                            <p class="metric-value">87.3%</p>
+                            <span class="metric-change positive">▲ 2.1%</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-content">
+                            <h3>Precision</h3>
+                            <p class="metric-value">89.2%</p>
+                            <span class="metric-change positive">▲ 1.5%</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-content">
+                            <h3>Recall</h3>
+                            <p class="metric-value">85.1%</p>
+                            <span class="metric-change positive">▲ 0.8%</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-content">
+                            <h3>F1-Score</h3>
+                            <p class="metric-value">87.1%</p>
+                            <span class="metric-change positive">▲ 1.4%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="section-grid">
+                    <div class="card">
+                        <h2>Model Performance Comparison</h2>
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+
+                    <div class="card">
+                        <h2>Intent Distribution</h2>
+                        <canvas id="intentChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- System Health -->
+                <div class="card">
+                    <h2>⚙️ System Health Indicators</h2>
+                    <div class="health-grid">
+                        <div class="health-item success">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Model Loaded</span>
+                        </div>
+                        <div class="health-item success">
+                            <i class="fas fa-check-circle"></i>
+                            <span>FAISS Index Ready</span>
+                        </div>
+                        <div class="health-item info">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Avg Inference: 450ms</span>
+                        </div>
+                        <div class="health-item success">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Claude API Connected</span>
+                        </div>
+                        <div class="health-item success">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Data Pipeline Active</span>
+                        </div>
+                        <div class="health-item info">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Queries Processed: 1,247</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pipeline Page -->
+            <div class="page" id="pipeline-page">
+                <div class="page-header">
+                    <h1>⚙️ Pipeline Execution</h1>
+                    <p>Run and manage ML pipeline processes</p>
+                </div>
+
+                <div class="card">
+                    <h2>Pipeline Execution Modes</h2>
+                    
+                    <div class="mode-selector">
+                        <label class="mode-option">
+                            <input type="radio" name="pipeline-mode" value="full" checked>
+                            <span>Full Pipeline</span>
+                        </label>
+                        <label class="mode-option">
+                            <input type="radio" name="pipeline-mode" value="preprocess">
+                            <span>Preprocess</span>
+                        </label>
+                        <label class="mode-option">
+                            <input type="radio" name="pipeline-mode" value="train">
+                            <span>Train</span>
+                        </label>
+                        <label class="mode-option">
+                            <input type="radio" name="pipeline-mode" value="golden">
+                            <span>Golden Dataset</span>
+                        </label>
+                        <label class="mode-option">
+                            <input type="radio" name="pipeline-mode" value="evaluate">
+                            <span>Evaluate</span>
+                        </label>
+                    </div>
+
+                    <button class="btn btn-primary btn-large" id="executeBtn">
+                        <i class="fas fa-play"></i> Execute
+                    </button>
+                </div>
+
+                <!-- Progress Section -->
+                <div class="card" id="progressContainer" style="display: none;">
+                    <h2>Execution Progress</h2>
+                    
+                    <div id="progressSteps" class="progress-steps">
+                        <!-- Steps will be added here -->
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="card" id="pipelineResults" style="display: none;">
+                    <h2>✅ Execution Completed</h2>
+                    <div id="resultsContent"></div>
+                </div>
+            </div>
+
+            <!-- Reports Page -->
+            <div class="page" id="reports-page">
+                <div class="page-header">
+                    <h1>📋 System Reports</h1>
+                    <p>Technical reports and analysis documentation</p>
+                </div>
+
+                <div class="card">
+                    <div class="report-selector">
+                        <select id="reportSelect">
+                            <option value="technical">Technical Report</option>
+                            <option value="decision">Decision Log</option>
+                            <option value="failure">Failure Analysis</option>
+                            <option value="evaluation">Evaluation Summary</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div id="reportContent" class="report-content">
+                        <!-- Report content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/java.js"></script>
+</body>
+</html>

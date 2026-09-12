@@ -1,0 +1,325 @@
+[
+  {
+    "sample_id": 0,
+    "tweet": "My lawyer advised me to file a formal lawsuit in consumer court against Amazon for gross negligence on my undelivered Mac.",
+    "true_intent": "Order Delay",
+    "predicted_intent": "Payment Issue",
+    "confidence": 0.231,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We're sorry to hear about the payment issue! If a charge failed, your bank usually releases holds within 3-5 business days. Please DM us with your account email so we can verify the transaction status. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Order Delay', but model predicted 'Payment Issue'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.23) close to runner-up (0.21), margin: 0.02."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "MEDIUM",
+        "details": "Top retrieved similarity score (0.31) fell below threshold (0.45)."
+      }
+    ]
+  },
+  {
+    "sample_id": 1,
+    "tweet": "I am submitting a complaint to the FTC and taking legal action regarding recurring charges after subscription cancellation.",
+    "true_intent": "Payment Issue",
+    "predicted_intent": "Order Delay",
+    "confidence": 0.1442,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We apologize for the delay with your order! Please send us a direct message with your 17-digit order number at amzn.to/help so we can check the status with our carrier. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Payment Issue', but model predicted 'Order Delay'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.14) close to runner-up (0.14), margin: 0.00."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "LOW",
+        "details": "Retrieved top example had mismatched intent ('Refund Request' vs 'Payment Issue')."
+      }
+    ]
+  },
+  {
+    "sample_id": 2,
+    "tweet": "If my damaged goods are not compensated within 24 hours my attorney is serving a subpoena.",
+    "true_intent": "Product Complaint",
+    "predicted_intent": "Order Delay",
+    "confidence": 0.1442,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We apologize for the delay with your order! Please send us a direct message with your 17-digit order number at amzn.to/help so we can check the status with our carrier. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Product Complaint', but model predicted 'Order Delay'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.14) close to runner-up (0.14), margin: 0.00."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "MEDIUM",
+        "details": "Top retrieved similarity score (0.33) fell below threshold (0.45)."
+      }
+    ]
+  },
+  {
+    "sample_id": 3,
+    "tweet": "URGENT: Someone stole my credit card and made $3000 unauthorized purchases on Amazon right now!",
+    "true_intent": "Payment Issue",
+    "predicted_intent": "Payment Issue",
+    "confidence": 0.689,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "AUTO_HANDLE",
+    "generated_reply": "We're sorry to hear about the payment issue! If a charge failed, your bank usually releases holds within 3-5 business days. Please DM us with your account email so we can verify the transaction status. ^AB",
+    "failures": [
+      {
+        "type": "Incorrect Escalation",
+        "severity": "CRITICAL",
+        "details": "False Negative Escalation: high-risk inquiry was auto-handled! Reason given: Standard support inquiry within operational bounds for intent 'Payment Issue' (confidence: 0.69)."
+      }
+    ]
+  },
+  {
+    "sample_id": 4,
+    "tweet": "I fell victim to a scam where a third party seller took my money and closed their storefront. Fraud!",
+    "true_intent": "Payment Issue",
+    "predicted_intent": "Refund Request",
+    "confidence": 0.2435,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We understand you are waiting on your refund. Standard refunds take 3-5 business days after processing. Please DM us your order ID and return tracking number so we can look into this for you. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Payment Issue', but model predicted 'Refund Request'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.24) close to runner-up (0.17), margin: 0.08."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "MEDIUM",
+        "details": "Top retrieved similarity score (0.44) fell below threshold (0.45)."
+      }
+    ]
+  },
+  {
+    "sample_id": 5,
+    "tweet": "There is a strange charge on my bank statement from Amazon EU that I never authorized.",
+    "true_intent": "Payment Issue",
+    "predicted_intent": "Refund Request",
+    "confidence": 0.2248,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We understand you are waiting on your refund. Standard refunds take 3-5 business days after processing. Please DM us your order ID and return tracking number so we can look into this for you. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Payment Issue', but model predicted 'Refund Request'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.22) close to runner-up (0.15), margin: 0.08."
+      }
+    ]
+  },
+  {
+    "sample_id": 7,
+    "tweet": "I am receiving two-factor authentication codes every 2 minutes. Someone is trying to break into my account.",
+    "true_intent": "Account Access",
+    "predicted_intent": "Account Access",
+    "confidence": 0.6009,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "AUTO_HANDLE",
+    "generated_reply": "Account security is very important to us. For your security, please never share passwords on Twitter. Please visit amzn.to/account-recovery or DM us your registered phone number for assistance. ^AB",
+    "failures": [
+      {
+        "type": "Incorrect Escalation",
+        "severity": "CRITICAL",
+        "details": "False Negative Escalation: high-risk inquiry was auto-handled! Reason given: Standard support inquiry within operational bounds for intent 'Account Access' (confidence: 0.60)."
+      }
+    ]
+  },
+  {
+    "sample_id": 8,
+    "tweet": "My seller account credentials were compromised and bank account details modified!",
+    "true_intent": "Account Access",
+    "predicted_intent": "Account Access",
+    "confidence": 0.4256,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "Account security is very important to us. For your security, please never share passwords on Twitter. Please visit amzn.to/account-recovery or DM us your registered phone number for assistance. ^AB",
+    "failures": [
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.43) close to runner-up (0.14), margin: 0.29."
+      }
+    ]
+  },
+  {
+    "sample_id": 9,
+    "tweet": "You worthless pieces of shit ruined my daughter's birthday! I hope your whole company burns to the ground.",
+    "true_intent": "Delivery Problem",
+    "predicted_intent": "Order Delay",
+    "confidence": 0.1442,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We apologize for the delay with your order! Please send us a direct message with your 17-digit order number at amzn.to/help so we can check the status with our carrier. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Delivery Problem', but model predicted 'Order Delay'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.14) close to runner-up (0.14), margin: 0.00."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "MEDIUM",
+        "details": "Top retrieved similarity score (0.28) fell below threshold (0.45)."
+      }
+    ]
+  },
+  {
+    "sample_id": 10,
+    "tweet": "Fucking idiots! Your courier threw the fragile package over the gate and broke everything.",
+    "true_intent": "Product Complaint",
+    "predicted_intent": "Delivery Problem",
+    "confidence": 0.6705,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "AUTO_HANDLE",
+    "generated_reply": "We apologize for the delivery experience! Please check around your porch or with neighbors. If the package is still missing, please DM us your tracking ID and delivery address so we can investigate. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Product Complaint', but model predicted 'Delivery Problem'."
+      },
+      {
+        "type": "Incorrect Escalation",
+        "severity": "CRITICAL",
+        "details": "False Negative Escalation: high-risk inquiry was auto-handled! Reason given: Standard support inquiry within operational bounds for intent 'Delivery Problem' (confidence: 0.67)."
+      }
+    ]
+  },
+  {
+    "sample_id": 11,
+    "tweet": "I have called your customer service 4 times and spoken to 3 different agents. No one is helping me with my lost package!",
+    "true_intent": "Delivery Problem",
+    "predicted_intent": "Delivery Problem",
+    "confidence": 0.4713,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We apologize for the delivery experience! Please check around your porch or with neighbors. If the package is still missing, please DM us your tracking ID and delivery address so we can investigate. ^AB",
+    "failures": [
+      {
+        "type": "Poor Retrieval",
+        "severity": "LOW",
+        "details": "Retrieved top example had mismatched intent ('Refund Request' vs 'Delivery Problem')."
+      }
+    ]
+  },
+  {
+    "sample_id": 13,
+    "tweet": "Tried 3 times to get a replacement for my broken monitor and courier keeps missing the pickup window.",
+    "true_intent": "Return Request",
+    "predicted_intent": "Return Request",
+    "confidence": 0.1536,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We're so sorry your item arrived in that condition! We want to make this right. Please DM us your order ID and photos of the damage so we can arrange an immediate replacement. ^AB",
+    "failures": [
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.15) close to runner-up (0.15), margin: 0.01."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "MEDIUM",
+        "details": "Top retrieved similarity score (0.45) fell below threshold (0.45)."
+      }
+    ]
+  },
+  {
+    "sample_id": 14,
+    "tweet": "Can somebody just help me? Nothing is working and I am lost.",
+    "true_intent": "Other",
+    "predicted_intent": "Product Complaint",
+    "confidence": 0.3243,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We're so sorry your item arrived in that condition! We want to make this right. Please DM us your order ID and photos of the damage so we can arrange an immediate replacement. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Other', but model predicted 'Product Complaint'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.32) close to runner-up (0.17), margin: 0.15."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "MEDIUM",
+        "details": "Top retrieved similarity score (0.25) fell below threshold (0.45)."
+      }
+    ]
+  },
+  {
+    "sample_id": 15,
+    "tweet": "The thing happened again like last Tuesday.",
+    "true_intent": "Other",
+    "predicted_intent": "Order Delay",
+    "confidence": 0.1442,
+    "true_escalation": "ESCALATE_TO_HUMAN",
+    "predicted_escalation": "ESCALATE_TO_HUMAN",
+    "generated_reply": "We apologize for the delay with your order! Please send us a direct message with your 17-digit order number at amzn.to/help so we can check the status with our carrier. ^AB",
+    "failures": [
+      {
+        "type": "Wrong Intent",
+        "severity": "HIGH",
+        "details": "Ground truth intent was 'Other', but model predicted 'Order Delay'."
+      },
+      {
+        "type": "Ambiguous Intent",
+        "severity": "MEDIUM",
+        "details": "Top probability (0.14) close to runner-up (0.14), margin: 0.00."
+      },
+      {
+        "type": "Poor Retrieval",
+        "severity": "MEDIUM",
+        "details": "Top retrieved similarity score (0.30) fell below threshold (0.45)."
+      }
+    ]
+  }
+]

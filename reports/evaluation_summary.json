@@ -1,0 +1,30 @@
+{
+  "total_samples": 200,
+  "intent_metrics": {
+    "accuracy": 0.955,
+    "precision_macro": 0.9567,
+    "recall_macro": 0.9559,
+    "f1_macro": 0.9553,
+    "precision_weighted": 0.9574,
+    "recall_weighted": 0.955,
+    "f1_weighted": 0.9552
+  },
+  "escalation_metrics": {
+    "accuracy": 0.985,
+    "precision_macro": 0.9918,
+    "recall_macro": 0.925,
+    "f1_macro": 0.9553,
+    "precision_weighted": 0.9852,
+    "recall_weighted": 0.985,
+    "f1_weighted": 0.9845
+  },
+  "judge_scores": {
+    "correctness": 5.0,
+    "relevance": 4.58,
+    "tone": 4.62,
+    "helpfulness": 5.0,
+    "overall_average": 4.8
+  },
+  "failure_count": 14,
+  "failure_rate": 0.07
+}
